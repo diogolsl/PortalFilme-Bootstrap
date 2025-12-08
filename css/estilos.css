@@ -1,0 +1,64 @@
+:root {
+    --primary-color: #e50914; /* Vermelho Netflix/Cinema ou Dourado */
+    --bg-dark: #141414;
+    --text-light: #f5f5f5;
+    --card-bg: #222;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Navbar Customizada */
+.navbar-custom {
+    background-color: #000;
+    border-bottom: 1px solid #333;
+}
+.navbar-brand {
+    font-weight: bold;
+    color: var(--primary-color) !important;
+    text-transform: uppercase;
+}
+
+/* Herói e Carrossel */
+.carousel-item {
+    height: 60vh; /* Altura do destaque */
+    background-position: center;
+    background-size: cover;
+}
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Cards e Seções */
+.card {
+    background-color: var(--card-bg);
+    border: none;
+    color: white;
+    transition: transform 0.3s;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.section-title {
+    border-left: 5px solid var(--primary-color);
+    padding-left: 15px;
+    margin-bottom: 30px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #000;
+    padding: 40px 0;
+    margin-top: 50px;
+}
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+}

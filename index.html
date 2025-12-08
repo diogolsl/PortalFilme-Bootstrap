@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Filmes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-film"></i> Portal de Filme</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="filmes.html">Filmes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="planos.html">Planos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url(img/PARIS_TEXAS.jpg) ;">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Paris, Texas</h1>
+                    <p>Dirigido por Wim Wenders. Um clássico road movie.</p>
+                    <a href="filmes.html" class="btn btn-danger">Saiba Mais</a>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('img/cdd.jpg');">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Cidade de Deus</h1>
+                    <p>A obra-prima do cinema brasileiro.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </header>
+
+    <section class="container my-5">
+        <div class="row text-center">
+            <div class="col-md-4 mb-4">
+                <i class="fas fa-users fa-3x mb-3 text-warning"></i>
+                <h3>Comunidade</h3>
+                <p>O ambiente perfeito para consumir e amar a sétima arte.</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <i class="fas fa-eye fa-3x mb-3 text-warning"></i>
+                <h3>Curadoria Humana</h3>
+                <p>Cada filme escolhido a dedo para seu entretenimento.</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <i class="fas fa-video fa-3x mb-3 text-warning"></i>
+                <h3>Qualidade Técnica</h3>
+                <p>A melhor imagem e som possível para você (4k disponível).</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-dark py-5">
+        <div class="container">
+            <h2 class="section-title">O que dizem sobre nós</h2>
+            <div id="testimonialCarousel" class="carousel slide text-center" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <blockquote class="blockquote">
+                            <p class="mb-4">"A melhor plataforma para filmes cult que já encontrei!"</p>
+                            <footer class="blockquote-footer">Ana Paula <cite title="Source Title">Crítica de Cinema</cite></footer>
+                        </blockquote>
+                    </div>
+                    <div class="carousel-item">
+                        <blockquote class="blockquote">
+                            <p class="mb-4">"A curadoria é impecável, descobri filmes incríveis."</p>
+                            <footer class="blockquote-footer">João Silva <cite title="Source Title">Assinante Premium</cite></footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center">
+        <div class="container">
+            <div class="social-icons mb-3">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2024 Portal de Filme. Todos os direitos reservados.</p>
+            <small>cinema@gmail.com | +55 61 911111111</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
