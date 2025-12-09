@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Filme - Contato</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-film"></i> Portal de Filme</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="filmes.html">Filmes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="planos.html">Planos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header text-white text-center d-flex align-items-center justify-content-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Fale Conosco</h1>
+            <p class="lead">Estamos aqui para ouvir suas sugestões e tirar dúvidas.</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <div class="row g-5">
+            
+            <div class="col-md-6">
+                <h3 class="text-dark fw-bold mb-4 border-start border-4 border-primary ps-3">Envie uma mensagem</h3>
+                <form>
+                    <div class="mb-3">
+                        <label for="nome" class="form-label text-secondary fw-bold">Nome Completo</label>
+                        <input type="text" class="form-control bg-light" id="nome" placeholder="Seu nome">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label text-secondary fw-bold">Email</label>
+                        <input type="email" class="form-control bg-light" id="email" placeholder="nome@exemplo.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="assunto" class="form-label text-secondary fw-bold">Assunto</label>
+                        <select class="form-select bg-light" id="assunto">
+                            <option selected>Selecione um assunto</option>
+                            <option value="1">Sugestão de Filme</option>
+                            <option value="2">Suporte Técnico</option>
+                            <option value="3">Planos e Cobrança</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensagem" class="form-label text-secondary fw-bold">Mensagem</label>
+                        <textarea class="form-control bg-light" id="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 py-2 fw-bold">ENVIAR MENSAGEM</button>
+                </form>
+            </div>
+
+            <div class="col-md-6">
+                <h3 class="text-dark fw-bold mb-4 border-start border-4 border-primary ps-3">Onde Estamos</h3>
+                
+                <div class="contact-info mb-4">
+                    <p class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Rua do Cinema, 123 - Brasília, DF</p>
+                    <p class="mb-2"><i class="fas fa-envelope text-primary me-2"></i> cinema@gmail.com</p>
+                    <p class="mb-2"><i class="fas fa-phone text-primary me-2"></i> (61) 91111-1111</p>
+                </div>
+
+                <div class="ratio ratio-4x3 border rounded shadow-sm">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.896739972309!2d-47.93674668514168!3d-16.07086898887968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935987a0c0e5a6b5%3A0x6a0c0e5a6b5a6b5!2sCidade%20Ocidental%20-%20GO!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="text-center py-4 bg-dark text-white">
+        <div class="container">
+            <div class="social-icons mb-3">
+                <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="mb-0">&copy; 2025 Portal de Filme.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
