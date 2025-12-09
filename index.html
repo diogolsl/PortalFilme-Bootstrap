@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
+
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html"><i class="fas fa-film"></i> Portal de Filme</a>
@@ -27,132 +28,75 @@
         </div>
     </nav>
 
-<header id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
-    </div>
+    <header id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+        </div>
 
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="img/PARIS_TEXAS.jpg" class="d-block w-100 img-hero" alt="Cinema">
-            <div class="carousel-caption">
-                <h1 class="fw-bold">Paris, Texas</h1>
-                <p class="d-none d-sm-block">Dirigido por Wim Wenders. Um clássico road movie.</p>
-                <a href="filmes.html" class="btn btn-danger mt-3">Saiba Mais</a>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/PARIS_TEXAS.jpg" class="d-block w-100 img-hero" alt="Cinema">
+                <div class="carousel-caption">
+                    <h1 class="fw-bold text-white">Paris, Texas</h1>
+                    <p class="d-none d-sm-block text-white">Dirigido por Wim Wenders. Um clássico road movie.</p>
+                    <a href="filmes.html" class="btn btn-primary mt-3">Saiba Mais</a>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="img/killbillbanner.jpg" class="d-block w-100 img-hero" alt="Briga">
+                <div class="carousel-caption">
+                    <h1 class="fw-bold text-white">Kill Bill</h1>
+                    <p class="d-none d-sm-block text-white">Clássico de Quentin Tarantino.</p>
+                    <a href="filmes.html" class="btn btn-primary mt-3">Assistir Agora</a>
+                </div>
+            </div>
+            
+            <div class="carousel-item">
+                <img src="img/entergalatic.jpg" class="d-block w-100 img-hero" alt="Natureza">
+                <div class="carousel-caption">
+                    <h1 class="fw-bold text-white">Entergalactic</h1>
+                    <p class="d-none d-sm-block text-white">Comédia Romântica em animação.</p>
+                    <a href="filmes.html" class="btn btn-primary mt-3">Descubra Mais</a>
+                </div>
             </div>
         </div>
 
-        <div class="carousel-item">
-            <img src="img/killbillbanner.jpg" class="d-block w-100 img-hero" alt="Briga">
-            <div class="carousel-caption">
-                <h1 class="fw-bold">Kill Bill</h1>
-                <p class="d-none d-sm-block">Clássico de Quentin Tarantino.</p>
-                <a href="filmes.html" class="btn btn-danger mt-3">Assistir Agora</a>
-            </div>
-        </div>
-        
-        <div class="carousel-item">
-            <img src="img/entergalatic.jpg" class="d-block w-100 img-hero" alt="Natureza">
-            <div class="carousel-caption">
-                <h1 class="fw-bold">Entergalactic</h1>
-                <p class="d-none d-sm-block">Comédia Romântica em animação.</p>
-                <a href="filmes.html" class="btn btn-danger mt-3">Descubra Mais</a>
-            </div>
-    </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </header>
 
-    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-    </button>
-</header>
-
-   <section class="container-fluid my-5">
-        <h3 class="section-title text-white ms-4">Destaques</h3>
+    <section class="container-fluid my-5">
+        <h3 class="section-title text-dark ms-4 border-start border-primary ps-3">Destaques</h3>
         
         <div class="scroll-container px-4">
             
             <div class="movie-card">
                 <img src="img/- PARIS,TEXAS -.jpg" alt="Paris Texas">
-                <div class="mt-2 text-white">Paris, Texas</div>
+                <div class="mt-2 text-dark fw-bold">Paris, Texas</div>
             </div>
 
             <div class="movie-card">
                 <img src="img/alien.jpg" alt="Alien">
-                <div class="mt-2 text-white">Alien</div>
+                <div class="mt-2 text-dark fw-bold">Alien</div>
             </div>
 
             <div class="movie-card">
                 <img src="img/ROSEMARY'S BABY (1968).jpg" alt="Rosemary Baby">
-                <div class="mt-2 text-white">Rosemary Baby</div>
+                <div class="mt-2 text-dark fw-bold">Rosemary Baby</div>
             </div>
 
             <div class="movie-card">
                 <img src="img/Mulholland Drive - TV Movie (1999).jpg" alt="Cidade dos Sonhos">
-                <div class="mt-2 text-white">Cidade dos Sonhos</div>
+                <div class="mt-2 text-dark fw-bold">Cidade dos Sonhos</div>
             </div>
 
             <div class="movie-card">
                 <img src="img/fallen-angels.jpg" alt="Fallen Angels">
-                <div class="mt-2 text-white">Fallen Angels</div>
-            </div>
-            
-            <div class="movie-card">
-                <img src="img/Chungking Express - Wong Kar Wai.jpg" alt="Clássico">
-                <div class="mt-2 text-white">Chungking Express</div>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="bg-darker py-5 border-top border-bottom border-secondary">
-        <div class="container">
-            <h2 class="text-center text-white mb-5">Vantagens</h2>
-            <div class="row text-center text-white">
-                
-                <div class="col-md-4 mb-3">
-                    <div class="advantage-card p-4">
-                        <i class="fas fa-ban fa-3x text-danger mb-3"></i>
-                        <h4>Sem Anúncios</h4>
-                        <p class="text-secondary">Assista sem interrupções. O foco é totalmente na arte.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-3">
-                    <div class="advantage-card p-4">
-                        <i class="fas fa-tv fa-3x text-danger mb-3"></i>
-                        <h4>Assista em 4K</h4>
-                        <p class="text-secondary">A melhor qualidade técnica disponível para todos os filmes.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-3">
-                    <div class="advantage-card p-4">
-                        <i class="fas fa-download fa-3x text-danger mb-3"></i>
-                        <h4>Assista Offline</h4>
-                        <p class="text-secondary">Baixe seus favoritos e assista onde estiver, sem internet.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <footer class="text-center">
-        <div class="container">
-            <div class="social-icons mb-3">
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-            </div>
-            <p>&copy; 2024 Portal de Filme. Todos os direitos reservados.</p>
-            <small>cinema@gmail.com | +55 61 911111111</small>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+                <div class="

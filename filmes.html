@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Filmes - Catálogo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-film"></i> Portal de Filme</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="filmes.html">Filmes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="planos.html">Planos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Catálogo Completo</h1>
+            <p class="lead">Explore nossa seleção curada de clássicos e obras-primas.</p>
+        </div>
+    </header>
+
+    <section class="container my-4">
+        <div class="row g-2 align-items-center bg-light p-3 rounded border">
+            <div class="col-md-3 text-dark fw-bold">
+                <i class="fas fa-filter me-2"></i> Filtrar por:
+            </div>
+            <div class="col-md-3">
+                <select class="form-select bg-secondary text-white border-0">
+                    <option selected>Gênero</option>
+                    <option value="1">Drama</option>
+                    <option value="2">Sci-Fi</option>
+                    <option value="3">Comédia</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select class="form-select bg-secondary text-white border-0">
+                    <option selected>Ano</option>
+                    <option value="1">Anos 80</option>
+                    <option value="2">Anos 90</option>
+                    <option value="3">Anos 2000</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select class="form-select bg-secondary text-white border-0">
+                    <option selected>Ordenar por</option>
+                    <option value="1">Mais Recentes</option>
+                    <option value="2">Mais Avaliados</option>
+                    <option value="3">A-Z</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <main class="container mb-5">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+            
+            <div class="col">
+                <div class="card h-100 movie-hover">
+                    <img src="img/- PARIS,TEXAS -.jpg" class="card-img-top" alt="Paris Texas">
+                    <div class="card-body">
+                        <h5 class="card-title">Paris, Texas</h5>
+                        <p class="card-text small text-muted">1984 • Drama</p>
+                        <a href="#" class="btn btn-danger btn-sm w-100">Assistir</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 movie-hover">
+                    <img src="img/Train Dreams (2025) ⭐ 7_6 | Drama.jpg" class="card-img-top" alt="Train Dreams">
+                    <div class="card-body">
+                        <h5 class="card-title">Train Dreams</h5>
+                        <p class="card-text small text-muted">2025 • Drama</p>
+                        <a href="#" class="btn btn-danger btn-sm w-100">Assistir</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 movie-hover">
+                    <img src="img/ROSEMARY'S BABY (1968).jpg" class="card-img-top" alt="rosemary's baby">
+                    <div class="card-body">
+                        <h5 class="card-title">Rosemary's Baby</h5>
+                        <p class="card-text small text-muted">1968 • Terror</p>
+                        <a href="#" class="btn btn-danger btn-sm w-100">Assistir</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 movie-hover">
+                    <img src="img/Chungking Express - Wong Kar Wai.jpg" class="card-img-top" alt="Chungking Express">
+                    <div class="card-body">
+                        <h5 class="card-title">Chungking Express</h5>
+                        <p class="card-text small text-muted">1994 • Drama</p>
+                        <a href="#" class="btn btn-danger btn-sm w-100">Assistir</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 movie-hover">
+                    <img src="img/alien.jpg" class="card-img-top" alt="Alien">
+                    <div class="card-body">
+                        <h5 class="card-title">Alien</h5>
+                        <p class="card-text small text-muted">1979 • Terror Sci - Fi</p>
+                        <a href="#" class="btn btn-danger btn-sm w-100">Assistir</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 movie-hover">
+                    <img src="img/La Haine 1995 Japanischer B5 Chirashi Flyer.jpg" class="card-img-top" alt="La Haine">
+                    <div class="card-body">
+                        <h5 class="card-title">La Haine</h5>
+                        <p class="card-text small text-muted">1995 • Drama</p>
+                        <a href="#" class="btn btn-danger btn-sm w-100">Assistir</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 movie-hover">
+                    <img src="img/entergalactic-poster.jpg" class="card-img-top" alt="Entergalactic">
+                    <div class="card-body">
+                        <h5 class="card-title">Entergalactic</h5>
+                        <p class="card-text small text-muted">2022 • Romance</p>
+                        <a href="#" class="btn btn-danger btn-sm w-100">Assistir</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 movie-hover">
+                    <img src="img/kill bill vol 1| ig @miltn_png.jpg" class="card-img-top" alt="Kill Bill">
+                    <div class="card-body">
+                        <h5 class="card-title">Kill Bill Vol. 1</h5>
+                        <p class="card-text small text-muted">2003 • Ação</p>
+                        <a href="#" class="btn btn-danger btn-sm w-100">Assistir</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <section class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h3><i class="fas fa-lightbulb"></i> Tem alguma sugestão de filme?</h3>
+            <p class="mb-4">Queremos saber o que você gostaria de assistir no CineCult.</p>
+            <a href="contato.html" class="btn btn-light fw-bold text-primary px-5 rounded-pill">MANDE AQUI</a>
+        </div>
+    </section>
+
+    <footer class="text-center bg-black py-4">
+        <div class="container">
+            <div class="social-icons mb-3">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p class="text-white-50">© 2024 CineCult. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

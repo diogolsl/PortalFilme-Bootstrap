@@ -1,132 +1,213 @@
+/* =========================================
+   1. VARIÁVEIS GLOBAIS (Tema Clean: Azul/Branco)
+   ========================================= */
 :root {
-    --primary-color: #e50914; 
-    --bg-dark: #141414;
-    --text-light: #f5f5f5;
-    --card-bg: #222;
+    --bg-body: #ffffff;       /* Fundo Branco */
+    --bg-light: #f8f9fa;      /* Cinza muito claro */
+    --bg-dark: #2c3e50;       /* Azul Petróleo (Navbar/Footer) */
+    --primary-color: #0d6efd; /* Azul Vibrante (Botões) */
+    --accent-color: #f1c40f;  /* Amarelo (Ícones de destaque) */
+    --text-main: #212529;     /* Texto Escuro */
+    --text-muted: #6c757d;    /* Texto Cinza */
 }
 
 body {
-    background-color: #141414;
-    color: #f5f5f5;
+    background-color: var(--bg-body);
+    color: var(--text-main);
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    overflow-x: hidden; /* Evita rolagem lateral indesejada na página */
 }
-/*Header
- Define uma altura fixa para o carrossel e corta a imagem para caber */
+
+/* =========================================
+   2. NAVBAR (Azul Escuro)
+   ========================================= */
+.navbar-custom {
+    background-color: var(--bg-dark) !important;
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,0.8);
+}
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #ffffff;
+}
+
+/* =========================================
+   3. HERO / CARROSSEL (Banner Principal)
+   ========================================= */
 .img-hero {
-    height: 70vh; /* Ocupa 70% da altura da tela */
+    height: 75vh; /* Altura do banner (75% da tela) */
     object-fit: cover; /* Corta a imagem para preencher sem esticar */
-    filter: brightness(0.6); /* Escurece a imagem em 40% para o texto branco brilhar */
+    filter: brightness(0.7); /* Escurece um pouco para ler o texto */
 }
 
-/* Ajuste da legenda */
 .carousel-caption {
-    bottom: 20%; /* Sobe um pouco o texto */
-    z-index: 2;
+    bottom: 20%;
 }
 
-/* Se quiser garantir que o titulo apareça grande */
 .carousel-caption h1 {
     font-size: 3rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8); /* Sombra no texto para leitura */
-}
-/* --- ESTILO DOS DESTAQUES (Rolagem Horizontal) --- */
-.scroll-container {
-    display: flex; /* Coloca os itens lado a lado */
-    overflow-x: auto; /* Permite rolar para o lado se não couber */
-    gap: 20px; /* Espaço entre os posters */
-    padding-bottom: 20px; /* Espaço para a barra de rolagem não colar */
+    font-weight: 800;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
 }
 
-/* Esconde a barra de rolagem feia (opcional, mas fica mais bonito) */
+/* =========================================
+   4. DESTAQUES (CORREÇÃO DOS PÔSTERES)
+   ========================================= */
+/* O container que permite a rolagem lateral */
+.scroll-container {
+    display: flex;        /* Coloca os itens lado a lado */
+    overflow-x: auto;     /* Ativa a rolagem horizontal */
+    gap: 20px;            /* Espaço entre os filmes */
+    padding: 20px 0;
+    scroll-behavior: smooth;
+}
+
+/* Estilo da barra de rolagem (opcional, fica mais bonito) */
 .scroll-container::-webkit-scrollbar {
     height: 8px;
 }
 .scroll-container::-webkit-scrollbar-track {
-    background: #333;
+    background: #f1f1f1;
 }
 .scroll-container::-webkit-scrollbar-thumb {
-    background: var(--primary-color); /* Vermelho */
+    background: var(--bg-dark); /* Barra azul escura */
     border-radius: 4px;
 }
 
+/* O Cartão do Filme Individual */
 .movie-card {
-    min-width: 200px; /* Tamanho fixo de cada poster */
+    min-width: 200px;  /* Tamanho fixo: impede que fiquem gigantes ou esmagados */
+    max-width: 200px;  /* Garante que todos tenham a mesma largura */
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease;
 }
 
+/* A Imagem do Pôster */
 .movie-card img {
-    width: 100%;
+    width: 100%;       /* Ocupa 100% dos 200px do pai */
+    height: 300px;     /* Altura fixa para alinhar todos */
+    object-fit: cover; /* Garante que a imagem não fique distorcida */
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
+/* Efeito ao passar o mouse */
 .movie-card:hover {
-    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    transform: scale(1.05); /* Zoom leve */
 }
 
-/* --- ESTILO DAS VANTAGENS --- */
-.bg-darker {
-    background-color: #0b0b0b; /* Um preto um pouco mais intenso para diferenciar */
+.movie-card .mt-2 {
+    font-weight: 600;
+    white-space: nowrap;      /* Não quebra linha no título */
+    overflow: hidden;         /* Esconde o que passar */
+    text-overflow: ellipsis;  /* Coloca "..." se o nome for longo */
 }
 
+/* =========================================
+   5. SEÇÃO DE VANTAGENS
+   ========================================= */
 .advantage-card {
-    background-color: transparent; /* Fundo transparente ou levemente cinza se preferir */
+    border: 1px solid #e9ecef;
     border-radius: 10px;
-}
-
-.advantage-card:hover i {
-    transform: scale(1.2); /* Ícone cresce ao passar o mouse */
     transition: transform 0.3s;
 }
-/* Navbar Customizada */
-.navbar-custom {
-    background-color: #000;
-    border-bottom: 1px solid #333;
-}
-.navbar-brand {
-    font-weight: bold;
-    color: var(--primary-color) !important;
-    text-transform: uppercase;
+
+.advantage-card:hover {
+    transform: translateY(-5px); /* Sobe um pouco */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
 }
 
-/* Herói e Carrossel */
-.carousel-item {
-    height: 60vh; /* Altura do destaque */
-    background-position: center;
-    background-size: cover;
-}
-.carousel-caption {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    border-radius: 10px;
+.advantage-card i {
+    color: var(--accent-color) !important; /* Ícones Amarelos/Dourados */
 }
 
-/* Cards e Seções */
-.card {
-    background-color: var(--card-bg);
-    border: none;
-    color: white;
-    transition: transform 0.3s;
-}
-.card:hover {
-    transform: scale(1.05);
-}
-.section-title {
-    border-left: 5px solid var(--primary-color);
-    padding-left: 15px;
-    margin-bottom: 30px;
-}
-
-/* Rodapé */
+/* =========================================
+   6. RODAPÉ
+   ========================================= */
 footer {
-    background-color: #000;
-    padding: 40px 0;
-    margin-top: 50px;
+    background-color: var(--bg-dark);
+    color: white;
+    margin-top: auto; /* Empurra o rodapé para o final */
 }
+
 .social-icons a {
     color: white;
     margin: 0 10px;
     font-size: 1.5rem;
-    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--accent-color);
+}
+
+/* =========================================
+   7. PÁGINA DE FILMES (CATÁLOGO)
+   ========================================= */
+
+/* Banner específico da página de filmes (Estático, sem carrossel) */
+.page-header {
+    /* Fundo com imagem e uma camada azul escura por cima para o texto ler bem */
+    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://source.unsplash.com/1600x600/?cinema,theater');
+    background-size: cover;
+    background-position: center;
+    height: 300px; /* Altura menor que a da Home */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 70px; /* Espaço para não ficar escondido atrás da navbar */
+    margin-bottom: 40px;
+}
+
+/* Ajuste para os Cards dentro da Grade (Grid) da página de Filmes */
+/* Na Home eles têm tamanho fixo (200px), aqui eles devem esticar para caber na coluna */
+main .movie-card {
+    min-width: auto; /* Remove a largura fixa da rolagem */
+    width: 100%;     /* Ocupa a largura da coluna do Bootstrap */
+    margin-bottom: 30px;
+}
+
+main .movie-card img {
+    height: 350px; /* Altura padronizada para todos os filmes da grade */
+    object-fit: cover;
+}
+
+/* Área de Filtros (Selects) */
+.filters-section {
+    background-color: var(--bg-light);
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.form-select {
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    color: var(--text-main);
+}
+
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Seção de Sugestão (Rodapé da página interna) */
+.suggestion-box {
+    background-color: var(--bg-dark); /* Azul Escuro */
+    color: white;
+    padding: 60px 0;
+    margin-top: 60px;
+    border-radius: 0; /* Faixa completa */
 }
