@@ -44,13 +44,18 @@ body {
    3. HERO / CARROSSEL (Banner Principal)
    ========================================= */
 .img-hero {
-    height: 50vh; /* Altura do banner (50% da tela) */
-    object-fit: cover; /* Corta a imagem para preencher sem esticar */
-    filter: brightness(0.7); /* Escurece um pouco para ler o texto */
+    width: 100%;
+    height: 65vh;          /* Altura dinâmica (65% da tela) */
+    max-height: 600px;     /* Trava a altura máxima no Desktop para não ficar gigante */
+    min-height: 300px;     /* Garante que não fique muito fino no celular */
+    object-fit: cover;     /* Preenche o espaço */
+    object-position: center 20%; /* FOCA NO TOPO (onde estão os rostos), cortando só embaixo */
+    filter: brightness(0.7);
 }
 
 .carousel-caption {
     bottom: 20%;
+    z-index: 10;
 }
 
 .carousel-caption h1 {
@@ -170,43 +175,47 @@ footer {
     margin-bottom: 40px;
 }
 
-/* 1. Força o cartão a preencher toda a largura da coluna */
-main .card {
+main .row {
+    margin-right: 0; /* Evita rolagem horizontal indesejada */
+}
+
+/* O Cartão do Filme */
+.catalog-card {
+    border: none;
+    background: transparent;
+    transition: transform 0.3s;
+    height: 100%; /* Garante que todos na linha tenham a mesma altura total */
+}
+
+.catalog-card:hover {
+    transform: translateY(-5px);
+}
+
+/* A Imagem do Pôster (O Segredo da Proporção) */
+.catalog-card img {
     width: 100%;
-    height: 100%; /* Garante que todos os cartões tenham a mesma altura final */
-    border: none; /* Remove borda dupla se houver */
+    /* Substitui height: 400px por aspect-ratio */
+    aspect-ratio: 2 / 3;   /* Proporção padrão de pôster de cinema */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* 2. O segredo: Padroniza as imagens */
-main .card img {
-    width: 100%;          /* Estica a imagem na largura total do cartão */
-    height: 400px;        /* Altura fixa para TODOS os pôsteres */
-    object-fit: cover;    /* Corta o excesso (zoom) para a imagem não ficar amassada */
-    object-position: center top; /* Centraliza o corte focando no topo (rostos/títulos) */
-    border-radius: 8px;   /* Arredonda os cantos */
-}
-
-/* 3. Ajuste para os textos não ficarem "dançando" */
-main .card-body {
+/* Corpo do card (Texto e Botão) */
+.catalog-card .card-body {
+    padding: 15px 5px; /* Mais espaço interno */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Empurra o botão para o final */
-    padding: 1.5rem;
-    text-align: left; /* Alinhamento à esquerda conforme sua imagem de exemplo */
+    justify-content: space-between;
 }
 
-main .card-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    color: #212529;
+.catalog-card .card-title {
+    font-size: 1.1rem;
+    white-space: nowrap;      /* Não quebra linha no título */
+    overflow: hidden;         /* Esconde se for muito grande */
+    text-overflow: ellipsis;  /* Adiciona "..." */
 }
 
-main .card-text {
-    font-size: 0.9rem;
-    color: #6c757d;
-    margin-bottom: 1rem;
-}
 
 /* Botão ocupando a largura total e vermelho/rosa conforme exemplo */
 main .btn-danger {
