@@ -232,20 +232,6 @@ main .btn-danger:hover {
     border-radius: 0; 
 }
 
-/* Destaque para o card do meio  */
-.card.border-primary {
-    transform: scale(1.05);
-    z-index: 2;
-    box-shadow: 0 10px 30px rgba(13, 110, 253, 0.15);
-}
-
-/* Ajuste no mobile para não sobrepor */
-@media (max-width: 768px) {
-    .card.border-primary {
-        transform: scale(1);
-    }
-}
-
 .accordion-button:not(.collapsed) {
     color: var(--primary-color);
     background-color: rgba(13, 110, 253, 0.1); 
@@ -275,4 +261,48 @@ main .btn-danger:hover {
 .contact-info i {
     width: 25px; /* para alinhar os icones */
     text-align: center;
+}
+
+.pricing-card {
+    transition: all 0.3s ease-in-out;
+    border-radius: 15px; 
+    background: #fff;
+}
+
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.1) !important;
+}
+
+
+.transform-scale {
+    transform: scale(1.05); 
+    z-index: 10;
+    border-top: 5px solid var(--primary-color) !important; 
+}
+
+
+.popular-badge {
+    position: absolute;
+    top: 20px;
+    right: -35px;
+    transform: rotate(45deg); 
+    padding: 5px 40px;
+    font-size: 0.8rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+
+.ls-1 {
+    letter-spacing: 2px;
+}
+
+
+@media (max-width: 991px) {
+    .transform-scale {
+        transform: scale(1);
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 }
