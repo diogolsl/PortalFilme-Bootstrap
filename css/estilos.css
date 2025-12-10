@@ -3,9 +3,9 @@
    ========================================= */
 :root {
     --bg-body: #ffffff;       /* Fundo Branco */
-    --bg-light: #f8f9fa;      /* Cinza muito claro */
-    --bg-dark: #2c3e50;       /* Azul Petróleo (Navbar/Footer) */
-    --primary-color: #0d6efd; /* Azul Vibrante (Botões) */
+    --bg-light: #d9d9d9;      /* Cinza muito claro */
+    --bg-dark: #111827;       /* Azul Petróleo (Navbar/Footer) */
+    --primary-color: #007bff; /* Azul Vibrante (Botões) */
     --accent-color: #f1c40f;  /* Amarelo (Ícones de destaque) */
     --text-main: #212529;     /* Texto Escuro */
     --text-muted: #6c757d;    /* Texto Cinza */
@@ -157,7 +157,7 @@ footer {
 /* Banner específico da página de filmes (Estático, sem carrossel) */
 .page-header {
     /* Fundo com imagem e uma camada azul escura por cima para o texto ler bem */
-    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://source.unsplash.com/1600x600/?cinema,theater');
+    background: var(--bg-light);
     background-size: cover;
     background-position: center;
     height: 300px; /* Altura menor que a da Home */
@@ -165,7 +165,7 @@ footer {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+    color: var(--text-main);
     margin-top: 70px; /* Espaço para não ficar escondido atrás da navbar */
     margin-bottom: 40px;
 }
@@ -211,10 +211,13 @@ main .card-text {
 /* Botão ocupando a largura total e vermelho/rosa conforme exemplo */
 main .btn-danger {
     width: 100%;
-    background-color: #d9534f; /* Tom avermelhado similar à imagem */
+    background-color: var(--primary-color); /* Tom avermelhado similar à imagem */
     border: none;
     font-weight: 600;
     padding: 10px;
+}
+main .btn-danger:hover {
+    background-color: #0056b3;
 }
 /* Área de Filtros (Selects) */
 .filters-section {
@@ -239,7 +242,7 @@ main .btn-danger {
 /* Seção de Sugestão (Rodapé da página interna) */
 .suggestion-box {
     background-color: var(--bg-dark); /* Azul Escuro */
-    color: white;
+    color: var(--text-main);
     padding: 60px 0;
     margin-top: 60px;
     border-radius: 0; /* Faixa completa */
