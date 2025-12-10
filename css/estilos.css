@@ -1,14 +1,12 @@
-/* =========================================
-   1. VARIÁVEIS GLOBAIS (Tema Clean: Azul/Branco)
-   ========================================= */
+/* 1. cores */
 :root {
-    --bg-body: #ffffff;       /* Fundo Branco */
-    --bg-light: #d9d9d9;      /* Cinza muito claro */
-    --bg-dark: #111827;       /* Azul Petróleo (Navbar/Footer) */
-    --primary-color: #007bff; /* Azul Vibrante (Botões) */
-    --accent-color: #f1c40f;  /* Amarelo (Ícones de destaque) */
-    --text-main: #212529;     /* Texto Escuro */
-    --text-muted: #6c757d;    /* Texto Cinza */
+    --bg-body: #ffffff;   
+    --bg-light: #d9d9d9;      
+    --bg-dark: #111827;       
+    --primary-color: #007bff; 
+    --accent-color: #f1c40f;  
+    --text-main: #212529;    
+    --text-muted: #6c757d;    
 }
 
 body {
@@ -18,9 +16,7 @@ body {
     overflow-x: hidden; /* Evita rolagem lateral indesejada na página */
 }
 
-/* =========================================
-   2. NAVBAR (Azul Escuro)
-   ========================================= */
+/* 2. NAVBAR  */
 .navbar-custom {
     background-color: var(--bg-dark) !important;
     padding: 15px 0;
@@ -40,16 +36,13 @@ body {
     color: #ffffff;
 }
 
-/* =========================================
-   3. HERO / CARROSSEL (Banner Principal)
-   ========================================= */
 .img-hero {
     width: 100%;
-    height: 65vh;          /* Altura dinâmica (65% da tela) */
-    max-height: 600px;     /* Trava a altura máxima no Desktop para não ficar gigante */
-    min-height: 300px;     /* Garante que não fique muito fino no celular */
-    object-fit: cover;     /* Preenche o espaço */
-    object-position: center 20%; /* FOCA NO TOPO (onde estão os rostos), cortando só embaixo */
+    height: 65vh;          
+    max-height: 600px;     
+    min-height: 300px;     
+    object-fit: cover;     
+    object-position: center 20%; 
     filter: brightness(0.7);
 }
 
@@ -64,19 +57,14 @@ body {
     text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
 }
 
-/* =========================================
-   4. DESTAQUES (CORREÇÃO DOS PÔSTERES)
-   ========================================= */
-/* O container que permite a rolagem lateral */
 .scroll-container {
-    display: flex;        /* Coloca os itens lado a lado */
-    overflow-x: auto;     /* Ativa a rolagem horizontal */
-    gap: 20px;            /* Espaço entre os filmes */
+    display: flex;        
+    overflow-x: auto;     
+    gap: 20px;           
     padding: 20px 0;
     scroll-behavior: smooth;
 }
-
-/* Estilo da barra de rolagem (opcional, fica mais bonito) */
+/* barra de rolagem */
 .scroll-container::-webkit-scrollbar {
     height: 8px;
 }
@@ -84,42 +72,39 @@ body {
     background: #f1f1f1;
 }
 .scroll-container::-webkit-scrollbar-thumb {
-    background: var(--bg-dark); /* Barra azul escura */
+    background: var(--bg-dark); 
     border-radius: 4px;
 }
 
 /* O Cartão do Filme Individual */
 .movie-card {
-    min-width: 200px;  /* Tamanho fixo: impede que fiquem gigantes ou esmagados */
-    max-width: 200px;  /* Garante que todos tenham a mesma largura */
+    min-width: 200px;  
+    max-width: 200px;  
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
 /* A Imagem do Pôster */
 .movie-card img {
-    width: 100%;       /* Ocupa 100% dos 200px do pai */
-    height: 300px;     /* Altura fixa para alinhar todos */
-    object-fit: cover; /* Garante que a imagem não fique distorcida */
+    width: 100%;       
+    height: 300px;     
+    object-fit: cover; 
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-/* Efeito ao passar o mouse */
+
 .movie-card:hover {
-    transform: scale(1.05); /* Zoom leve */
+    transform: scale(1.05); 
 }
 
 .movie-card .mt-2 {
     font-weight: 600;
-    white-space: nowrap;      /* Não quebra linha no título */
+    white-space: nowrap;      /* Não quebra linha */
     overflow: hidden;         /* Esconde o que passar */
-    text-overflow: ellipsis;  /* Coloca "..." se o nome for longo */
+    text-overflow: ellipsis;  /* Coloca "..."  */
 }
 
-/* =========================================
-   5. SEÇÃO DE VANTAGENS
-   ========================================= */
 .advantage-card {
     border: 1px solid #e9ecef;
     border-radius: 10px;
@@ -127,21 +112,19 @@ body {
 }
 
 .advantage-card:hover {
-    transform: translateY(-5px); /* Sobe um pouco */
+    transform: translateY(-5px); 
     box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
 }
 
 .advantage-card i {
-    color: var(--primary-color) !important; /* Ícones Amarelos/Dourados */
+    color: var(--primary-color) !important; 
 }
 
-/* =========================================
-   6. RODAPÉ
-   ========================================= */
+/* 6. RODAPÉ */
 footer {
     background-color: var(--bg-dark);
     color: white;
-    margin-top: auto; /* Empurra o rodapé para o final */
+    margin-top: auto; 
 }
 
 .social-icons a {
@@ -155,55 +138,48 @@ footer {
     color: var(--accent-color);
 }
 
-/* =========================================
-   7. PÁGINA DE FILMES (CATÁLOGO)
-   ========================================= */
+/* 7. PÁGINA DE FILMES */
 
-/* Banner específico da página de filmes (Estático, sem carrossel) */
 .page-header {
-    /* Fundo com imagem e uma camada azul escura por cima para o texto ler bem */
     background: var(--bg-light);
     background-size: cover;
     background-position: center;
-    height: 300px; /* Altura menor que a da Home */
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: var(--text-main);
-    margin-top: 70px; /* Espaço para não ficar escondido atrás da navbar */
+    margin-top: 70px; 
     margin-bottom: 40px;
 }
 
 main .row {
-    margin-right: 0; /* Evita rolagem horizontal indesejada */
+    margin-right: 0; 
 }
 
-/* O Cartão do Filme */
+
 .catalog-card {
     border: none;
     background: transparent;
     transition: transform 0.3s;
-    height: 100%; /* Garante que todos na linha tenham a mesma altura total */
+    height: 100%; /* ficam todos na mesma linha */
 }
 
 .catalog-card:hover {
     transform: translateY(-5px);
 }
 
-/* A Imagem do Pôster (O Segredo da Proporção) */
 .catalog-card img {
     width: 100%;
-    /* Substitui height: 400px por aspect-ratio */
-    aspect-ratio: 2 / 3;   /* Proporção padrão de pôster de cinema */
+    aspect-ratio: 2 / 3;   /* Proporção de pôster de cinema */
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Corpo do card (Texto e Botão) */
 .catalog-card .card-body {
-    padding: 15px 5px; /* Mais espaço interno */
+    padding: 15px 5px; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -211,24 +187,23 @@ main .row {
 
 .catalog-card .card-title {
     font-size: 1.1rem;
-    white-space: nowrap;      /* Não quebra linha no título */
+    white-space: nowrap;      /* Não quebra linha */
     overflow: hidden;         /* Esconde se for muito grande */
-    text-overflow: ellipsis;  /* Adiciona "..." */
+    text-overflow: ellipsis;  /* Adiciona ...*/
 }
 
-
-/* Botão ocupando a largura total e vermelho/rosa conforme exemplo */
 main .btn-danger {
     width: 100%;
-    background-color: var(--primary-color); /* Tom avermelhado similar à imagem */
+    background-color: var(--primary-color); 
     border: none;
     font-weight: 600;
     padding: 10px;
 }
+
 main .btn-danger:hover {
     background-color: #0056b3;
 }
-/* Área de Filtros (Selects) */
+ 
 .filters-section {
     background-color: var(--bg-light);
     border: 1px solid #dee2e6;
@@ -248,22 +223,18 @@ main .btn-danger:hover {
     box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 
-/* Seção de Sugestão (Rodapé da página interna) */
+/* Seção de Sugestão */
 .suggestion-box {
-    background-color: var(--bg-dark); /* Azul Escuro */
+    background-color: var(--bg-dark); 
     color: var(--text-main);
     padding: 60px 0;
     margin-top: 60px;
-    border-radius: 0; /* Faixa completa */
+    border-radius: 0; 
 }
 
-/* =========================================
-   ESTILOS ESPECÍFICOS - PLANOS & ACORDEONS
-   ========================================= */
-
-/* Destaque para o card do meio (Plano Padrão) */
+/* Destaque para o card do meio  */
 .card.border-primary {
-    transform: scale(1.05); /* Deixa ele um pouquinho maior */
+    transform: scale(1.05);
     z-index: 2;
     box-shadow: 0 10px 30px rgba(13, 110, 253, 0.15);
 }
@@ -275,15 +246,14 @@ main .btn-danger:hover {
     }
 }
 
-/* Estilo dos Acordeons (FAQ) */
 .accordion-button:not(.collapsed) {
     color: var(--primary-color);
-    background-color: rgba(13, 110, 253, 0.1); /* Fundo azul bem clarinho quando aberto */
+    background-color: rgba(13, 110, 253, 0.1); 
     font-weight: bold;
 }
 
 .accordion-button:focus {
-    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); /* Foco azul */
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); 
     border-color: rgba(13, 110, 253, 0.5);
 }
 
@@ -293,20 +263,16 @@ main .btn-danger:hover {
     font-weight: 600;
 }
 
-/* =========================================
-   PÁGINA CONTATO
-   ========================================= */
+/* PÁGINA CONTATO */
 
-/* Foco nos campos do formulário (Borda Azul) */
 .form-control:focus, 
 .form-select:focus {
     border-color: var(--primary-color);
     box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
-    background-color: white; /* Fica branco ao digitar */
+    background-color: white;  
 }
 
-/* Ícones de contato */
 .contact-info i {
-    width: 25px; /* Alinha os ícones verticalmente */
+    width: 25px; /* para alinhar os icones */
     text-align: center;
 }
