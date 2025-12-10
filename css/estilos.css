@@ -127,7 +127,7 @@ body {
 }
 
 .advantage-card i {
-    color: var(--accent-color) !important; /* Ícones Amarelos/Dourados */
+    color: var(--primary-color) !important; /* Ícones Amarelos/Dourados */
 }
 
 /* =========================================
