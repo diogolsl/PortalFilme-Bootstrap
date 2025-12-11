@@ -1,22 +1,20 @@
-/* 1. cores */
 :root {
-    --bg-body: #ffffff;   
-    --bg-light: #d9d9d9;      
-    --bg-dark: #111827;       
+    --bg-body: #ffffff; 
+    --bg-light: #d9d9d9; 
+    --bg-dark: #111827; 
     --primary-color: #007bff; 
-    --accent-color: #f1c40f;  
-    --text-main: #212529;    
-    --text-muted: #6c757d;    
+    --accent-color: #f1c40f; 
+    --text-main: #212529; 
+    --text-muted: #6c757d; 
 }
 
 body {
     background-color: var(--bg-body);
     color: var(--text-main);
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    overflow-x: hidden; /* Evita rolagem lateral indesejada na página */
+    overflow-x: hidden;
 }
 
-/* 2. NAVBAR  */
 .navbar-custom {
     background-color: var(--bg-dark) !important;
     padding: 15px 0;
@@ -31,17 +29,199 @@ body {
 .navbar-dark .navbar-nav .nav-link {
     color: rgba(255,255,255,0.8);
 }
+
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
     color: #ffffff;
 }
 
+.carousel-fade .carousel-item {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.carousel-fade .carousel-item.active {
+    opacity: 1;
+}
+
+.hero-custom-layout {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-img-custom {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.7);
+    transition: transform 0.8s ease;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(26, 26, 46, 0.95) 0%, rgba(26, 26, 46, 0.7) 50%, transparent 100%);
+    z-index: 1;
+}
+
+.hero-content-custom {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.hero-content-custom .badge {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.hero-content-custom h1 {
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.hero-content-custom .lead {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.carousel-custom-nav {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    z-index: 10;
+    width: 100%;
+}
+
+.carousel-nav-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.carousel-nav-btn:hover {
+    background: rgba(0, 123, 255, 0.8);
+    border-color: rgba(0, 123, 255, 1);
+    transform: scale(1.1);
+}
+
+.carousel-nav-btn.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+#heroCarousel {
+    background-color: var(--bg-dark);
+}
+
+.carousel-inner {
+    background-color: var(--bg-dark);
+}
+
+.nav-number {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.carousel-controls-custom {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.carousel-control-custom {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    pointer-events: all;
+    backdrop-filter: blur(5px);
+}
+
+.carousel-control-custom:hover {
+    background: var(--primary-color);
+    transform: scale(1.15);
+}
+
+.carousel-control-custom i {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 991px) {
+    .hero-image-wrapper {
+        height: 50vh;
+    }
+    
+    .hero-content-custom .display-3 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content-custom .p-5 {
+        padding: 2rem !important;
+    }
+    
+    .carousel-custom-nav {
+        display: none;
+    }
+    
+    .carousel-control-custom {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-content-custom .display-3 {
+        font-size: 2rem;
+    }
+    
+    .hero-content-custom .btn-lg {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
 .img-hero {
     width: 100%;
-    height: 65vh;          
-    max-height: 600px;     
-    min-height: 300px;     
-    object-fit: cover;     
+    height: 65vh; 
+    max-height: 600px; 
+    min-height: 300px; 
+    object-fit: cover; 
     object-position: center 20%; 
     filter: brightness(0.7);
 }
@@ -58,41 +238,40 @@ body {
 }
 
 .scroll-container {
-    display: flex;        
-    overflow-x: auto;     
-    gap: 20px;           
+    display: flex; 
+    overflow-x: auto; 
+    gap: 20px; 
     padding: 20px 0;
     scroll-behavior: smooth;
 }
-/* barra de rolagem */
+
 .scroll-container::-webkit-scrollbar {
     height: 8px;
 }
+
 .scroll-container::-webkit-scrollbar-track {
     background: #f1f1f1;
 }
+
 .scroll-container::-webkit-scrollbar-thumb {
     background: var(--bg-dark); 
     border-radius: 4px;
 }
 
-/* O Cartão do Filme Individual */
 .movie-card {
-    min-width: 200px;  
-    max-width: 200px;  
+    min-width: 200px; 
+    max-width: 200px; 
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
-/* A Imagem do Pôster */
 .movie-card img {
-    width: 100%;       
-    height: 300px;     
+    width: 100%; 
+    height: 300px; 
     object-fit: cover; 
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
-
 
 .movie-card:hover {
     transform: scale(1.05); 
@@ -100,9 +279,9 @@ body {
 
 .movie-card .mt-2 {
     font-weight: 600;
-    white-space: nowrap;      /* Não quebra linha */
-    overflow: hidden;         /* Esconde o que passar */
-    text-overflow: ellipsis;  /* Coloca "..."  */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .advantage-card {
@@ -120,7 +299,6 @@ body {
     color: var(--primary-color) !important; 
 }
 
-/* 6. RODAPÉ */
 footer {
     background-color: var(--bg-dark);
     color: white;
@@ -137,8 +315,6 @@ footer {
 .social-icons a:hover {
     color: var(--accent-color);
 }
-
-/* 7. PÁGINA DE FILMES */
 
 .page-header {
     background: var(--bg-light);
@@ -158,12 +334,11 @@ main .row {
     margin-right: 0; 
 }
 
-
 .catalog-card {
     border: none;
     background: transparent;
     transition: transform 0.3s;
-    height: 100%; /* ficam todos na mesma linha */
+    height: 100%;
 }
 
 .catalog-card:hover {
@@ -172,7 +347,7 @@ main .row {
 
 .catalog-card img {
     width: 100%;
-    aspect-ratio: 2 / 3;   /* Proporção de pôster de cinema */
+    aspect-ratio: 2 / 3;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -187,9 +362,9 @@ main .row {
 
 .catalog-card .card-title {
     font-size: 1.1rem;
-    white-space: nowrap;      /* Não quebra linha */
-    overflow: hidden;         /* Esconde se for muito grande */
-    text-overflow: ellipsis;  /* Adiciona ...*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 main .btn-danger {
@@ -223,7 +398,6 @@ main .btn-danger:hover {
     box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 
-/* Seção de Sugestão */
 .suggestion-box {
     background-color: var(--bg-dark); 
     color: var(--text-main);
@@ -243,23 +417,20 @@ main .btn-danger:hover {
     border-color: rgba(13, 110, 253, 0.5);
 }
 
-/* Títulos da tabela de preço */
 .card-header h4 {
     margin: 0;
     font-weight: 600;
 }
 
-/* PÁGINA CONTATO */
-
 .form-control:focus, 
 .form-select:focus {
     border-color: var(--primary-color);
     box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
-    background-color: white;  
+    background-color: white; 
 }
 
 .contact-info i {
-    width: 25px; /* para alinhar os icones */
+    width: 25px;
     text-align: center;
 }
 
@@ -269,12 +440,10 @@ main .btn-danger:hover {
     background: #fff;
 }
 
-
 .pricing-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 1rem 3rem rgba(0,0,0,0.1) !important;
 }
-
 
 .transform-scale {
     transform: scale(1.05); 
@@ -285,7 +454,6 @@ main .btn-danger:hover {
 .ls-1 {
     letter-spacing: 2px;
 }
-
 
 @media (max-width: 991px) {
     .transform-scale {
